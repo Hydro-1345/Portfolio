@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>John Oni - Web Developer & Digital Architect | Portfolio</title>
+    <meta name="description" content="John Oni is a Web Developer and Digital Architect blending front-end development with skills in CRM, email marketing, and virtual assistance. View my projects and get in touch.">
+    <meta name="keywords" content="web developer, digital architect, CRM, email marketing, virtual assistant, health tech, JavaScript, HTML, CSS">
+    <meta name="author" content="John Oni">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#3b82f6">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="John Oni - Web Developer & Digital Architect">
+    <meta property="og:description" content="Designing digital systems with clarity, code, and purpose — to bridge health, sports, and tech for better performance and recovery">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://johnoni.dev">
+    <meta property="og:image" content="https://johnoni.dev/assets/profile-image.jpg">
+    <meta property="og:image:alt" content="John Oni - Web Developer & Digital Architect">
+    <meta property="og:site_name" content="John Oni Portfolio">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="John Oni - Web Developer & Digital Architect">
+    <meta name="twitter:description" content="Designing digital systems with clarity, code, and purpose — to bridge health, sports, and tech for better performance and recovery">
+    <meta name="twitter:image" content="https://johnoni.dev/assets/profile-image.jpg">
+    <meta name="twitter:creator" content="@johnoni">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to content for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Header/Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container" role="navigation" aria-label="Main navigation">
+            <div class="nav__data">
+                <a href="#home" class="nav__logo" aria-label="Homepage">
+                    <span class="logo-text">John Oni</span>
+                </a>
+                
+                <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="nav__toggle-icon"></span>
+                    <span class="nav__toggle-icon"></span>
+                    <span class="nav__toggle-icon"></span>
+                </button>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu" role="menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link" role="menuitem">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#experience" class="nav__link" role="menuitem">Experience</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#projects" class="nav__link" role="menuitem">Projects</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link" role="menuitem">Contact</a>
+                    </li>
+                    <li class="nav__item">
+                        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme">
+                            <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Hero Section -->
+        <section class="hero section" id="home">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <div class="hero__image-container">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face&auto=format&q=80" 
+                             alt="John Oni - Professional headshot" 
+                             class="hero__image"
+                             loading="eager"
+                             width="400"
+                             height="400">
+                        <div class="hero__image-decoration" aria-hidden="true"></div>
+                    </div>
+                    
+                    <div class="hero__text">
+                        <span class="hero__greeting">Hi there! I'm John 👋</span>
+                        <h1 class="hero__title">
+                            Web Developer & Digital Architect 
+                            <span class="hero__highlight">bridging health, sports, and technology</span>
+                        </h1>
+                        <p class="hero__description">
+                            Blending front-end development with expertise in CRM, email marketing, 
+                            and virtual assistance. Creating digital systems with clarity, code, and purpose.
+                        </p>
+                        
+                        <div class="hero__buttons">
+                            <a href="#contact" class="btn btn--primary">
+                                Let's Work Together
+                                <span class="btn__icon" aria-hidden="true">→</span>
+                            </a>
+                            <a href="#projects" class="btn btn--secondary">
+                                View My Work
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Scroll indicator -->
+                <div class="hero__scroll">
+                    <a href="#about" class="hero__scroll-link" aria-label="Scroll to about section">
+                        <span class="hero__scroll-text">Scroll Down</span>
+                        <div class="hero__scroll-icon" aria-hidden="true">↓</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle">Get To Know Me</span>
+                    <h2 class="section__title">About Me</h2>
+                </div>
+                
+                <div class="about__container">
+                    <div class="about__content">
+                        <div class="about__text">
+                            <p class="about__description">
+                                I'm John Oni — a Web Developer and Digital Architect blending front-end development 
+                                with skills in CRM, email marketing, and virtual assistance. With a foundation in 
+                                physiology and hands-on experience in healthcare, my long-term goal is to bridge 
+                                health and technology, designing tools that improve performance, recovery, and digital workflows.
+                            </p>
+                            <p class="about__description">
+                                I've built expertise in web development, CRM systems, email marketing platforms, 
+                                and digital workflow management. My journey reflects a balance: delivering immediate 
+                                value in digital support while steadily building toward tech-driven solutions in health and sports.
+                            </p>
+                            
+                            <!-- Skills Grid -->
+                            <div class="about__skills">
+                                <h3 class="skills__title">Technical Skills</h3>
+                                <div class="skills__grid">
+                                    <div class="skill__category">
+                                        <h4 class="skill__category-title">Web Development</h4>
+                                        <ul class="skill__list">
+                                            <li>HTML, CSS, JavaScript</li>
+                                            <li>GitHub</li>
+                                            <li>WordPress & Elementor</li>
+                                            <li>Responsive Web Design</li>
+                                            <li>E-Publishing & Content Structuring</li>
+                                        </ul>
+                                    </div>
+                                    <div class="skill__category">
+                                        <h4 class="skill__category-title">CRM & Marketing</h4>
+                                        <ul class="skill__list">
+                                            <li>HubSpot, Brevo, Apollo</li>
+                                            <li>Mailmeteor, GMass, Mailchimp</li>
+                                            <li>Mergo, Thunderbird, Mailmerge</li>
+                                            <li>Email Marketing Campaigns</li>
+                                            <li>Customer Relationship Management</li>
+                                        </ul>
+                                    </div>
+                                    <div class="skill__category">
+                                        <h4 class="skill__category-title">Design & Workflow</h4>
+                                        <ul class="skill__list">
+                                            <li>Canva, CapCut</li>
+                                            <li>Notion, Google Workspace</li>
+                                            <li>Anydesk, Zoom</li>
+                                            <li>Virtual Assistance</li>
+                                            <li>Digital Systems Management</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Vision Statement -->
+                            <div class="about__vision">
+                                <h3 class="vision__title">My Vision</h3>
+                                <p class="vision__text">
+                                    Designing digital systems with clarity, code, and purpose — to bridge health, 
+                                    sports, and tech for better performance and recovery.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience section" id="experience">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle">My Journey</span>
+                    <h2 class="section__title">Work Experience</h2>
+                </div>
+                
+                <div class="experience__container">
+                    <!-- Experience Timeline -->
+                    <div class="timeline" role="list">
+                        <div class="timeline__item" role="listitem">
+                            <div class="timeline__marker" aria-hidden="true"></div>
+                            <div class="timeline__content">
+                                <time class="timeline__period" datetime="2023">2023 - Present</time>
+                                <h3 class="timeline__title">CRM Specialist</h3>
+                                <h4 class="timeline__company">Hassle Free Electric</h4>
+                                <p class="timeline__description">
+                                    Managing customer relationships and digital workflows for electrical services company. 
+                                    Implementing CRM systems and optimizing customer engagement processes.
+                                </p>
+                                <div class="timeline__technologies">
+                                    <span class="tech-tag">CRM</span>
+                                    <span class="tech-tag">Customer Management</span>
+                                    <span class="tech-tag">Digital Workflows</span>
+                                    <span class="tech-tag">Process Optimization</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline__item" role="listitem">
+                            <div class="timeline__marker" aria-hidden="true"></div>
+                            <div class="timeline__content">
+                                <time class="timeline__period" datetime="2025">2025 - Present</time>
+                                <h3 class="timeline__title">Email Marketing Intern</h3>
+                                <h4 class="timeline__company">GaoTek Inc.</h4>
+                                <p class="timeline__description">
+                                    Developing and executing email marketing campaigns, managing subscriber lists, 
+                                    and analyzing campaign performance metrics for technology company.
+                                </p>
+                                <div class="timeline__technologies">
+                                    <span class="tech-tag">Email Marketing</span>
+                                    <span class="tech-tag">Campaign Management</span>
+                                    <span class="tech-tag">Analytics</span>
+                                    <span class="tech-tag">Subscriber Management</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline__item" role="listitem">
+                            <div class="timeline__marker" aria-hidden="true"></div>
+                            <div class="timeline__content">
+                                <time class="timeline__period" datetime="2025">2025 - Present</time>
+                                <h3 class="timeline__title">Virtual Assistant</h3>
+                                <h4 class="timeline__company">Freelance</h4>
+                                <p class="timeline__description">
+                                    Providing administrative and digital support to entrepreneurs and small teams: 
+                                    scheduling, document handling, data entry, and research.
+                                </p>
+                                <div class="timeline__technologies">
+                                    <span class="tech-tag">Administrative Support</span>
+                                    <span class="tech-tag">Digital Organization</span>
+                                    <span class="tech-tag">Project Management</span>
+                                    <span class="tech-tag">Research</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline__item" role="listitem">
+                            <div class="timeline__marker" aria-hidden="true"></div>
+                            <div class="timeline__content">
+                                <time class="timeline__period" datetime="2025">June 2025 - Present</time>
+                                <h3 class="timeline__title">Lab Technician</h3>
+                                <h4 class="timeline__company">4 Brigade Medical Centre, Nigerian Army Cantonment</h4>
+                                <p class="timeline__description">
+                                    Conducting laboratory tests, maintaining medical equipment, and supporting 
+                                    healthcare professionals in diagnostic procedures.
+                                </p>
+                                <div class="timeline__technologies">
+                                    <span class="tech-tag">Medical Laboratory</span>
+                                    <span class="tech-tag">Diagnostic Procedures</span>
+                                    <span class="tech-tag">Equipment Maintenance</span>
+                                    <span class="tech-tag">Healthcare Support</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline__item" role="listitem">
+                            <div class="timeline__marker" aria-hidden="true"></div>
+                            <div class="timeline__content">
+                                <time class="timeline__period" datetime="2023">May 2023 - October 2023</time>
+                                <h3 class="timeline__title">ECG Technician</h3>
+                                <h4 class="timeline__company">University of Medical Sciences</h4>
+                                <p class="timeline__description">
+                                    Performing electrocardiogram procedures, analyzing cardiac rhythms, 
+                                    and assisting in cardiovascular diagnostic assessments.
+                                </p>
+                                <div class="timeline__technologies">
+                                    <span class="tech-tag">ECG Procedures</span>
+                                    <span class="tech-tag">Cardiac Analysis</span>
+                                    <span class="tech-tag">Medical Diagnostics</span>
+                                    <span class="tech-tag">Patient Care</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Education -->
+                    <div class="education">
+                        <h3 class="education__title">Education & Certifications</h3>
+                        <div class="education__grid">
+                            <div class="education__item">
+                                <h4 class="education__degree">Responsive Web Design Certification</h4>
+                                <p class="education__school">FreeCodeCamp</p>
+                                <time class="education__period" datetime="2024">2024</time>
+                            </div>
+                            <div class="education__item">
+                                <h4 class="education__degree">Email Marketing Certification</h4>
+                                <p class="education__school">GaoTek Inc.</p>
+                                <time class="education__period" datetime="2025">2025</time>
+                            </div>
+                            <div class="education__item">
+                                <h4 class="education__degree">Additional Certifications</h4>
+                                <p class="education__school">Coming Soon</p>
+                                <time class="education__period" datetime="2025">2025</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle">My Work</span>
+                    <h2 class="section__title">Featured Projects</h2>
+                </div>
+                
+                <div class="projects__container">
+                    <!-- Project Card 1 -->
+                    <article class="project__card">
+                        <div class="project__image-container">
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop&auto=format&q=80" 
+                                 alt="HealthTrack Pro - Fitness tracking application interface showing workout dashboard" 
+                                 class="project__image"
+                                 loading="lazy"
+                                 width="800"
+                                 height="600">
+                            <div class="project__overlay">
+                                <div class="project__links">
+                                    <a href="https://healthtrack-demo.vercel.app" 
+                                       class="project__link" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       aria-label="View HealthTrack Pro live demo">
+                                        <span aria-hidden="true">🔗</span> Live Demo
+                                    </a>
+                                    <a href="https://github.com/johnoni/healthtrack-pro" 
+                                       class="project__link" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       aria-label="View HealthTrack Pro source code">
+                                        <span aria-hidden="true">🔗</span> View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">HealthTrack Pro</h3>
+                            <p class="project__description">
+                                Comprehensive fitness tracking application with real-time analytics, 
+                                custom workout plans, and social features. Built with React and modern web APIs.
+                            </p>
+                            <div class="project__technologies">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">Chart.js</span>
+                                <span class="tech-tag">PWA</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project Card 2 -->
+                    <article class="project__card">
+                        <div class="project__image-container">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&auto=format&q=80" 
+                                 alt="EcoCommerce - Sustainable e-commerce platform dashboard with analytics" 
+                                 class="project__image"
+                                 loading="lazy"
+                                 width="800"
+                                 height="600">
+                            <div class="project__overlay">
+                                <div class="project__links">
+                                    <a href="https://ecocommerce-demo.netlify.app" 
+                                       class="project__link" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       aria-label="View EcoCommerce live demo">
+                                        <span aria-hidden="true">🔗</span> Live Demo
+                                    </a>
+                                    <a href="https://github.com/johnoni/ecocommerce" 
+                                       class="project__link" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       aria-label="View EcoCommerce source code">
+                                        <span aria-hidden="true">🔗</span> View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">EcoCommerce Platform</h3>
+                            <p class="project__description">
+                                Sustainable e-commerce platform with carbon footprint tracking, 
+                                eco-friendly product recommendations, and green shipping options.
+                            </p>
+                            <div class="project__technologies">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">Stripe</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project Card 3 -->
+                    <article class="project__card">
+                        <div class="project__image-container">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format&q=80" 
+                                 alt="TaskFlow - Project management tool interface with Kanban board" 
+                                 class="project__image"
+                                 loading="lazy"
+                                 width="800"
+                                 height="600">
+                            <div class="project__overlay">
+                                <div class="project__links">
+                                    <a href="https://taskflow-demo.vercel.app" 
+                                       class="project__link" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       aria-label="View TaskFlow live demo">
+                                        <span aria-hidden="true">🔗</span> Live Demo
+                                    </a>
+                                    <a href="https://github.com/johnoni/taskflow" 
+                                       class="project__link" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       aria-label="View TaskFlow source code">
+                                        <span aria-hidden="true">🔗</span> View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">TaskFlow Management</h3>
+                            <p class="project__description">
+                                Intuitive project management tool with Kanban boards, time tracking, 
+                                team collaboration features, and detailed analytics dashboard.
+                            </p>
+                            <div class="project__technologies">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">WebSockets</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project Card 4 -->
+                    <article class="project__card">
+                        <div class="project__image-container">
+                            <img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=800&h=600&fit=crop&auto=format&q=80" 
+                                 alt="MindfulSpace - Mental wellness application with meditation interface" 
+                                 class="project__image"
+                                 loading="lazy"
+                                 width="800"
+                                 height="600">
+                            <div class="project__overlay">
+                                <div class="project__links">
+                                    <a href="https://mindfulspace-demo.netlify.app" 
+                                       class="project__link" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       aria-label="View MindfulSpace live demo">
+                                        <span aria-hidden="true">🔗</span> Live Demo
+                                    </a>
+                                    <a href="https://github.com/johnoni/mindfulspace" 
+                                       class="project__link" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       aria-label="View MindfulSpace source code">
+                                        <span aria-hidden="true">🔗</span> View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">MindfulSpace</h3>
+                            <p class="project__description">
+                                Mental wellness platform with guided meditation, mood tracking, 
+                                breathing exercises, and personalized wellness insights.
+                            </p>
+                            <div class="project__technologies">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">Web APIs</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle">Get In Touch</span>
+                    <h2 class="section__title">Let's Work Together</h2>
+                </div>
+                
+                <div class="contact__container">
+                    <div class="contact__content">
+                        <div class="contact__info">
+                            <h3 class="contact__info-title">Ready to start your project?</h3>
+                            <p class="contact__info-description">
+                                I'm always interested in new opportunities and exciting projects. 
+                                Whether you have a question or just want to say hi, I'll do my best 
+                                to get back to you!
+                            </p>
+                            
+                            <div class="contact__details">
+                                <div class="contact__detail">
+                                    <span class="contact__detail-icon" aria-hidden="true">📧</span>
+                                    <div class="contact__detail-info">
+                                        <h4 class="contact__detail-title">Email</h4>
+                                        <a href="mailto:O.Jworks@outlook.com" class="contact__detail-link">
+                                            O.Jworks@outlook.com
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact__detail">
+                                    <span class="contact__detail-icon" aria-hidden="true">💼</span>
+                                    <div class="contact__detail-info">
+                                        <h4 class="contact__detail-title">LinkedIn</h4>
+                                        <a href="https://www.linkedin.com/in/oni-john-460b6921b" 
+                                           class="contact__detail-link" 
+                                           target="_blank" 
+                                           rel="noopener noreferrer">
+                                           Linkedin.com/in/oni-john-460b6921b
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact__detail">
+                                    <span class="contact__detail-icon" aria-hidden="true">🐙</span>
+                                    <div class="contact__detail-info">
+                                        <h4 class="contact__detail-title">GitHub</h4>
+                                        <a href="https://github.com/Hydro-1345" 
+                                           class="contact__detail-link" 
+                                           target="_blank" 
+                                           rel="noopener noreferrer">
+                                            github.com/Hydro-1345
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__form-container">
+                            <form class="contact__form" id="contact-form" novalidate>
+                                <div class="form__group">
+                                    <label for="name" class="form__label">Name *</label>
+                                    <input type="text" 
+                                           id="name" 
+                                           name="name" 
+                                           class="form__input" 
+                                           required 
+                                           aria-describedby="name-error"
+                                           autocomplete="name">
+                                    <span class="form__error" id="name-error" role="alert"></span>
+                                </div>
+                                
+                                <div class="form__group">
+                                    <label for="email" class="form__label">Email *</label>
+                                    <input type="email" 
+                                           id="email" 
+                                           name="email" 
+                                           class="form__input" 
+                                           required 
+                                           aria-describedby="email-error"
+                                           autocomplete="email">
+                                    <span class="form__error" id="email-error" role="alert"></span>
+                                </div>
+                                
+                                <div class="form__group">
+                                    <label for="subject" class="form__label">Subject *</label>
+                                    <input type="text" 
+                                           id="subject" 
+                                           name="subject" 
+                                           class="form__input" 
+                                           required 
+                                           aria-describedby="subject-error">
+                                    <span class="form__error" id="subject-error" role="alert"></span>
+                                </div>
+                                
+                                <div class="form__group">
+                                    <label for="message" class="form__label">Message *</label>
+                                    <textarea id="message" 
+                                              name="message" 
+                                              class="form__textarea" 
+                                              rows="5" 
+                                              required 
+                                              aria-describedby="message-error"></textarea>
+                                    <span class="form__error" id="message-error" role="alert"></span>
+                                </div>
+                                
+                                <button type="submit" class="btn btn--primary btn--full">
+                                    <span class="btn__text">Send Message</span>
+                                    <span class="btn__loader" style="display: none;" aria-hidden="true">Sending...</span>
+                                </button>
+                            </form>
+                            
+                            <div class="form__success" id="form-success" style="display: none;" role="alert">
+                                <span class="success__icon" aria-hidden="true">✅</span>
+                                <h3 class="success__title">Message Sent!</h3>
+                                <p class="success__text">Thank you for your message. I'll get back to you soon!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta section">
+            <div class="container">
+                <div class="cta__container">
+                    <div class="cta__content">
+                        <h2 class="cta__title">Ready to bring your ideas to life?</h2>
+                        <p class="cta__description">
+                            Let's collaborate and create something amazing together. 
+                            I'm here to help turn your vision into reality.
+                        </p>
+                        <div class="cta__buttons">
+                            <a href="#contact" class="btn btn--primary btn--large">
+                                Hire Me Now
+                                <span class="btn__icon" aria-hidden="true">→</span>
+                            </a>
+                            <a href="https://www.dropbox.com/scl/fi/19537d0unuk63mnatqdri/JOHN-AYODELE-ONI-CV-RE..pdf?rlkey=gncmvpq9v2xzef01ljew61nva&st=sjvmq381&dl=0" 
+                               class="btn btn--secondary btn--large" 
+                               download="John-Oni-Resume.pdf"
+                               aria-label="Download John Oni's resume (PDF)">
+                                Download Resume
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__container">
+                <div class="footer__content">
+                    <div class="footer__brand">
+                        <h3 class="footer__title">John Oni</h3>
+                        <p class="footer__subtitle">Web Developer & Digital Architect</p>
+                    </div>
+                    
+                    <nav class="footer__links" aria-label="Footer navigation">
+                        <div class="footer__group">
+                            <h4 class="footer__group-title">Navigation</h4>
+                            <ul class="footer__list">
+                                <li><a href="#about" class="footer__link">About</a></li>
+                                <li><a href="#experience" class="footer__link">Experience</a></li>
+                                <li><a href="#projects" class="footer__link">Projects</a></li>
+                                <li><a href="#contact" class="footer__link">Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer__group">
+                            <h4 class="footer__group-title">Connect</h4>
+                            <ul class="footer__list">
+                                <li>
+                                    <a href="mailto:O.Jworks@outlook.com" class="footer__link">
+                                        Email
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/oni-john-460b6921b" 
+                                       class="footer__link" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer">
+                                        LinkedIn
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/Hydro-1345" 
+                                       class="footer__link" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer">
+                                        GitHub
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/johnayodele23" 
+                                       class="footer__link" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer">
+                                        Twitter
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                
+                <div class="footer__bottom">
+                    <p class="footer__copy">
+                        © 2024 John Oni. All rights reserved. 
+                        <span class="footer__tagline">Designing digital systems with clarity, code, and purpose.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <span aria-hidden="true">↑</span>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
