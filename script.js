@@ -167,11 +167,13 @@ function initializeContactForm() {
         input.addEventListener('input', () => clearFieldError(input));
     });
 
-    // Form submission
+    // Form submission - allow normal Formspree submission
     contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
+        // Don't prevent default - let Formspree handle the submission
+        // e.preventDefault(); // REMOVED THIS LINE
         
         if (!validateForm()) {
+            e.preventDefault(); // Only prevent if validation fails
             return;
         }
 
@@ -180,10 +182,12 @@ function initializeContactForm() {
         btnText.style.display = 'none';
         btnLoader.style.display = 'inline-block';
 
-        try {
-            await simulateFormSubmission(new FormData(contactForm));
-            
-            // Show success message
+        // Let the form submit normally to Formspree
+        // The success message will be shown after Formspree redirects back
+        // or we can show it immediately for better UX
+        
+        // Show success message after a short delay to simulate submission
+        setTimeout(() => {
             contactForm.style.display = 'none';
             formSuccess.style.display = 'block';
             
@@ -193,16 +197,14 @@ function initializeContactForm() {
                 contactForm.style.display = 'block';
                 formSuccess.style.display = 'none';
             }, 5000);
-            
-        } catch (error) {
-            console.error('Form submission error:', error);
-            showFormError('Sorry, there was an error sending your message. Please try again.');
-        } finally {
-            // Reset button state
+        }, 1000);
+        
+        // Reset button state after form submission
+        setTimeout(() => {
             submitButton.disabled = false;
             btnText.style.display = 'inline-block';
             btnLoader.style.display = 'none';
-        }
+        }, 2000);
     });
 
     function validateForm() {
@@ -258,18 +260,19 @@ function initializeContactForm() {
         return emailRegex.test(email);
     }
 
-    async function simulateFormSubmission(formData) {
-        // Replace this with your actual form submission logic
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                if (Math.random() > 0.1) {
-                    resolve('Message sent successfully');
-                } else {
-                    reject(new Error('Network error'));
-                }
-            }, 2000);
-        });
-    }
+    // Remove the simulateFormSubmission function as it's no longer needed
+    // async function simulateFormSubmission(formData) {
+    //     // Replace this with your actual form submission logic
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             if (Math.random() > 0.1) {
+    //                 resolve('Message sent successfully');
+    //             } else {
+    //                 reject(new Error('Network error'));
+    //             }
+    //         }, 2000);
+    //     });
+    // }
 
     function showFormError(message) {
         let errorDiv = contactForm.querySelector('.form__error-message');
@@ -528,6 +531,31 @@ document.addEventListener('keydown', (e) => {
             mainContent.scrollIntoView();
         }
     }
+});
+
+// This is the code for inline formspree data submission confirmation 
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault(); // stop redirect
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { Accept: "application/json" }
+    });
+
+    if (response.ok) {
+      form.reset();
+      document.querySelector(".form__success").style.display = "block";
+    } else {
+      alert("Oops! Something went wrong.");
+    }
+  } catch (error) {
+    alert("Error submitting form. Please try again.");
+  }
 });
 
 // Respect user's motion preferences

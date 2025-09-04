@@ -583,7 +583,13 @@
                         </div>
                         
                         <div class="contact__form-container">
-                            <form class="contact__form" id="contact-form" novalidate>
+                            <form action="https://formspree.io/f/xnnbovvz" method="POST" class="contact__form" id="contact-form">
+                                <!-- Hidden fields for Formspree -->
+                                <input type="hidden" name="_next" value="https://johnoni.dev/#contact">
+                                <input type="hidden" name="_subject" value="New Contact Form Submission - John Oni Portfolio">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_template" value="table">
+                                
                                 <div class="form__group">
                                     <label for="name" class="form__label">Name *</label>
                                     <input type="text" 
