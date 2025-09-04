@@ -1,4 +1,4 @@
-# John Doe – Frontend Developer Portfolio
+# John Oni – Frontend Developer Portfolio
 
 A modern, accessible, and responsive portfolio website to showcase my skills, experience, and projects as a frontend developer. This site is built with semantic HTML5, modular CSS, and vanilla JavaScript, featuring a clean design, dark/light theme toggle, and smooth, accessible animations.
 
