@@ -395,10 +395,12 @@ function initializeTypingAnimation() {
     if (!typingElement) return;
 
     const phrases = [
-        'bridge technology and innovation',
-        'create meaningful digital experiences',
-        'solve complex problems with code',
-        'build the future, one line at a time'
+        'Bridging health & technology.',
+        'Building digital products.',
+        'Smarter digital workflows.',
+        'AI for real-world problems.',
+        'Technology with purpose.',
+        'Turning ideas into solutions.'
     ];
     
     let phraseIndex = 0;
@@ -433,6 +435,11 @@ function initializeTypingAnimation() {
             isDeleting = false;
             phraseIndex = (phraseIndex + 1) % phrases.length;
             typeSpeed = 500;
+
+            // Restart underline animation so ::after recovers after the empty-text gap
+            typingElement.classList.add('hero__highlight--reset');
+            void typingElement.offsetWidth;
+            typingElement.classList.remove('hero__highlight--reset');
         }
 
         setTimeout(type, typeSpeed);
